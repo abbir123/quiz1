@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My quiz app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"
+      integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body background="background.jfif">
+    <center>
+      <h3 class="btn btn-warning heading">
+        My quiz app
+        <br />
+        <span class="note"
+          >NOTE -Select the correct answer. You will be given 30 seconds to
+          answer each question.</span
+        >
+      </h3>
+      <div class="score" id="score">score:0</div>
+      <div class="Q1" id="Q1">
+        <p>Who is the ceo of Alphabet:</p>
+         
+        <input type="radio" id="answer1_1" name="fav_language" value="HTML" />  
+        <label for="html">Satya Nadal</label><br />
+         
+        <input type="radio" id="answer1_2" name="fav_language" value="CSS" />  
+        <label for="css">Barack Obama</label><br />
+         
+        <input
+          type="radio"
+          id="answer1_3"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Elon Musk</label>
+        <input
+          type="radio"
+          id="answer1_4"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Sundar Pichai</label>
+        <br />
+        <button onclick="checkAnswer1()">Check</button>
+      </div>
+      <div class="Q2" id="Q2">
+        <p>Who was the first person to step on moon?:</p>
+         
+        <input type="radio" id="answer2_1" name="fav_language" value="HTML" />  
+        <label for="html">Fred Haise</label><br />
+         
+        <input type="radio" id="answer2_2" name="fav_language" value="CSS" />  
+        <label for="css">Rakesh Kumar</label><br />
+         
+        <input
+          type="radio"
+          id="answer2_3"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Neil Armstrong</label>
+        <input
+          type="radio"
+          id="answer2_4"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Buzz Aldrin</label>
+        <br />
+        <button onclick="checkAnswer2()">Check</button>
+      </div>
+      <div class="Q3" id="Q3">
+        <p>Largest active volcano:</p>
+         
+        <input type="radio" id="answer3_1" name="fav_language" value="HTML" />  
+        <label for="html">Mt. Fuji</label><br />
+         
+        <input type="radio" id="answer3_2" name="fav_language" value="CSS" />  
+        <label for="css">Barren Islands</label><br />
+         
+        <input
+          type="radio"
+          id="answer3_3"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Mauna Loa</label>
+        <input
+          type="radio"
+          id="answer3_4"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Mt.Etna</label>
+        <br />
+        <button onclick="checkAnswer3()">Check</button>
+      </div>
+      <div class="Q4" id="Q4">
+        <p>Longest river:</p>
+         
+        <input type="radio" id="answer4_1" name="fav_language" value="HTML" />  
+        <label for="html">Nile</label><br />
+         
+        <input type="radio" id="answer4_2" name="fav_language" value="CSS" />  
+        <label for="css">Amazon</label><br />
+         
+        <input
+          type="radio"
+          id="answer4_3"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Ganges</label>
+        <input
+          type="radio"
+          id="answer4_4"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Yamuna</label>
+        <br />
+        <button onclick="checkAnswer4()">Check</button>
+      </div>
+
+      <div class="Q5" id="Q5">
+        <p>Longest Desert:</p>
+         
+        <input type="radio" id="answer5_1" name="fav_language" value="HTML" />  
+        <label for="html">Thar</label><br />
+         
+        <input type="radio" id="answer5_2" name="fav_language" value="CSS" />  
+        <label for="css">Sahara</label><br />
+         
+        <input
+          type="radio"
+          id="answer5_3"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Kalhari</label>
+        <input
+          type="radio"
+          id="answer5_4"
+          name="fav_language"
+          value="JavaScript"
+        />
+          <label for="javascript">Namib</label>
+        <br />
+        <button onclick="checkAnswer5()">Check</button>
+      </div>
+      <div class="success" id="success">
+        <p>
+          Well done! You have scored all 5 points.
+          <br />
+          <img src="emoji1.png" style="width: 100px; height: 100px" />
+        </p>
+      </div>
+
+      <div class="endgame" id="endgame">
+        <p>
+          Sorry! you have lost the quiz
+          <br />
+          <img src="emoji2.png" style="width: 100px; height: 100px" />
+        </p>
+      </div>
+      <br />
+    </center>
+    <script src="quiz.js"
+  </body>
+
+

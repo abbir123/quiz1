@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My quiz app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body background="background.jfif">
+<center>
+  	<h3 class="btn btn-warning heading">My quiz app 
+	    <br>
+	    <span class="note" >NOTE -Select the correct answer. You will be given 30 seconds to answer each question.</span>
+  	</h3>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 div_1">
+          <h3>Read the following instructions <span class="listen"><img src="volume.jfif" class="img-responsive" onclick="listen()"></span>
+        </h3>
+
+        <br>
+        <ul class="instructions"
+        ><li>
+            There are going to be five questions
+        </li>
+        <li>
+          There will be four options.You have to choose the correct one.  
+        </li>
+        <li>
+            You will get thirty seconds to answer each question.
+        </li>
+        <li>
+            If your answer is incorrect you will have to restart the quiz.
+        </li>
+    
+    </ul>
+    <br>
+    <button class="btn btn-success" onclick="start()" >start</button>
+    <br>
+    <br>
+    <br>
+    
+      </div>
+
+    </center>
+    <script src="main.js"></script>
+</body>
